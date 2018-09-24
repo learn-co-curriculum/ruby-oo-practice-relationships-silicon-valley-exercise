@@ -63,8 +63,6 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Build out the following methods on the `FundingRound` class
 
-- `FundingRound.all`
-  - returns all of the funding rounds
 - `FundingRound#startup`
   - returns the startup object for that given funding round
   - Once a funding round is created, I should not be able to change the startup
@@ -76,6 +74,8 @@ We've provided you with a console that you can use to test your code. To enter a
   - Examples include: Angel, Pre-Seed, Seed, Series A, Series B, Series C, etc.
 - `FundingRound#investment`
   - returns the amount invested during this funding round. This should be a float that is not be a negative number.
+- `FundingRound.all`
+  - returns all of the funding rounds
 
 ---
 
@@ -98,10 +98,10 @@ We've provided you with a console that you can use to test your code. To enter a
 
 - `VentureCapitalist#offer_contract(startup, type, investment)`
   - given a **startup object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
-- `VentureCapitalist#portfolio`
-  - Returns a **unique** list of all startups this venture capitalist has funded
 - `VentureCapitalist#funding_rounds`
   - returns an array of all funding rounds for that venture capitalist
+- `VentureCapitalist#portfolio`
+  - Returns a **unique** list of all startups this venture capitalist has funded
 - `VentureCapitalist#biggest_investment`
   - returns the largest funding round given by this venture capitalist
 - `VentureCapitalist#invested(domain)`
