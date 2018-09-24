@@ -73,7 +73,7 @@ We've provided you with a console that you can use to test your code. To enter a
   - returns the type of funding round
   - Examples include: Angel, Pre-Seed, Seed, Series A, Series B, Series C, etc.
 - `FundingRound#investment`
-  - returns the amount invested during this funding round. This should be a float that is not be a negative number.
+  - returns the amount invested during this funding round. This should be a float that is not a negative number.
 - `FundingRound.all`
   - returns all of the funding rounds
 
