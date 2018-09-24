@@ -43,8 +43,8 @@ We've provided you with a console that you can use to test your code. To enter a
   - given a string of a **founder's name**, returns the **first startup** whose founder's name matches
 - `Startup.domains`
   - should return an **array** of all of the different startup domains
-- `Startup.pivot(domain)`
-  - given a string of a domain, change the domain of the startup
+- `Startup#pivot`
+  - given a string of a **domain**, change the domain of the startup
 
 ---
 
