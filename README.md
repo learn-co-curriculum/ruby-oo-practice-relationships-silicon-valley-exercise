@@ -1,8 +1,6 @@
 # Object Relations Code Challenge
 
-Welcome to Silicon Valley! For this assignment, our domain is the startup world! We have three models - `Startup`, `VentureCapitalist`, and `FundingRound`.
-For our purposes, a `Startup` has many `FundingRounds`, a `VentureCapitalist` has many `FundingRounds`, and a `FundingRound` belongs to a `Startup` and to a `VentureCapitalist`.
-`Startup` - `VentureCapitalist` is a many to many relationship.
+Welcome to Silicon Valley! For this assignment, our domain is the startup world! We have three models - `Startup`, `VentureCapitalist`, and `FundingRound`. A `Startup` has many `VentureCapitalist`s through `FundingRound`s.
 
 If you are not sketching out your domain, and thinking about single source of truth,
 you are doing it wrong :(
@@ -37,14 +35,14 @@ We've provided you with a console that you can use to test your code. To enter a
 - `Startup#domain`
   - returns a **string** that is the startup's domain
   - Once a startup is created, the domain cannot be changed.
+- `Startup#pivot`
+  - given a string of a **domain** and a string of a **name**, change the domain and name of the startup
 - `Startup.all`
   - should return **all** of the startup instances
 - `Startup.find_by_founder`
   - given a string of a **founder's name**, returns the **first startup** whose founder's name matches
 - `Startup.domains`
   - should return an **array** of all of the different startup domains
-- `Startup#pivot`
-  - given a string of a **domain**, change the domain of the startup
 
 ---
 
@@ -70,10 +68,11 @@ We've provided you with a console that you can use to test your code. To enter a
   - returns the venture capitalist object for that given funding round
   - Once a funding round is created, I should not be able to change the venture capitalist
 - `FundingRound#type`
-  - returns the type of funding round
+  - returns a **string** that is the type of funding round
   - Examples include: Angel, Pre-Seed, Seed, Series A, Series B, Series C, etc.
 - `FundingRound#investment`
-  - returns the amount invested during this funding round. This should be a float that is not a negative number.
+  - returns a **number** that is the amount invested during this funding round
+  - This should be a float that is not a negative number.
 - `FundingRound.all`
   - returns all of the funding rounds
 
@@ -83,7 +82,7 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Startup
 
-- `Startup#sign_contract(venture_capitalist, type, investment)`
+- `Startup#sign_contract`
   - given a **venture capitalist object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
 - `Startup#num_funding_rounds`
   - Returns the total number of funding rounds that the startup has gotten
@@ -96,7 +95,7 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### VentureCapitalist
 
-- `VentureCapitalist#offer_contract(startup, type, investment)`
+- `VentureCapitalist#offer_contract`
   - given a **startup object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
 - `VentureCapitalist#funding_rounds`
   - returns an array of all funding rounds for that venture capitalist
@@ -104,7 +103,7 @@ We've provided you with a console that you can use to test your code. To enter a
   - Returns a **unique** list of all startups this venture capitalist has funded
 - `VentureCapitalist#biggest_investment`
   - returns the largest funding round given by this venture capitalist
-- `VentureCapitalist#invested(domain)`
+- `VentureCapitalist#invested`
   - given a **domain string**, returns the total amount invested in that domain
 
 ---
