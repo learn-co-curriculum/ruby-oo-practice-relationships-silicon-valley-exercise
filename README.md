@@ -50,12 +50,12 @@ We've provided you with a console that you can use to test your code. To enter a
 
 - `VentureCapitalist#name`
   - returns a **string** that is the venture capitalist's name
-- `VentureCapitalist#tres_commas`
-  - returns a **boolean** stating whether or not the venture capitalist is in the Trés Commas club
+- `VentureCapitalist#total_worth`
+  - returns a **number** that is the total worth of this investor (e.g., think of it as how much money they have)
 - `VentureCapitalist.all`
   - returns an array of all venture capitalists
 - `VentureCapitalist.tres_commas_club`
-  - returns an array of all venture capitalists in the Trés Commas club
+  - returns an array of all venture capitalists in the Trés Commas club (they have more then 1,000,000,000 `total_worth`)
 
 ---
 
