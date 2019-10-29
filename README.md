@@ -34,9 +34,10 @@ We've provided you with a console that you can use to test your code. To enter a
   - Once a startup is created, the founder cannot be changed.
 - `Startup#domain`
   - returns a **string** that is the startup's domain
-  - Once a startup is created, the domain cannot be changed (ie. A developer working with instances of the Startup class cannot directly change the domain)
 - `Startup#pivot`
-  - given a string of a **domain** and a string of a **name**, change the domain and name of the startup. This is the only public method through which the domain can be changed.
+  - given a string of a **domain** and a string of a **name**, change the domain
+    and name of the startup. This is the only public method through which the
+    domain should be changed.
 - `Startup.all`
   - should return **all** of the startup instances
 - `Startup.find_by_founder`
